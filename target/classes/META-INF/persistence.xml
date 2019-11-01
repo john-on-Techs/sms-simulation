@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+
+    <persistence-unit name="pu" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>sms_simulationDS</jta-data-source>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/sms_simulation"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="Franjescal 1997"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>
